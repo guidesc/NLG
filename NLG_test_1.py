@@ -1,26 +1,8 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 import keras
 import numpy as np
 from keras.layers import Embedding, Dense
 from keras.models import Sequential
 import pandas as pd
-
-
-# In[2]:
-
-
-get_ipython().system('dir')
-
-
-# In[3]:
-
-
-from __future__ import print_function
 
 from keras.models import Model
 from keras.layers import Input, LSTM, Dense
@@ -63,8 +45,6 @@ for line in lines[1: min(num_samples, len(lines) - 3)]:
         print(line)
 
 
-# In[ ]:
-
 
 input_characters = sorted(list(input_characters))
 target_characters = sorted(list(target_characters))
@@ -105,8 +85,6 @@ for i, (input_text, target_text) in enumerate(zip(input_texts, target_texts)):
             # and will not include the start character.
             decoder_target_data[i, t - 1, target_token_index[char]] = 1.
 
-
-# In[ ]:
 
 
 # Define an input sequence and process it.
